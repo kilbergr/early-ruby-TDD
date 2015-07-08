@@ -5,6 +5,7 @@ class Animal
 		@name = name
 		@age = age
 		@sleeping = true
+		@@all_animals = []
 	end
 
 	def wake_up
@@ -23,6 +24,12 @@ class Animal
 		"NOM NOM NOM"	unless self.sleeping 
 	end
 
+	def show_all_animals
+
+		@@all_animals << self
+		
+	end
+
 end
 
 class Dog < Animal
@@ -36,11 +43,11 @@ class Dog < Animal
 		"WOOF" unless self.sleeping
 	end
 
-	def show_favorite_treats
+	def self.show_favorite_treats
 		@@favorite_treats
 	end
 
-	def add_favorite_treat(treat)
+	def self.add_favorite_treat(treat)
 		@@favorite_treats << treat
 	end
 end

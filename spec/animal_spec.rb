@@ -49,14 +49,14 @@ describe Dog do
 
 	describe "should show favorite treats" do
 		it "should show favorite_treat array" do
-			expect(dog.show_favorite_treats).to eq(["bones", "pistachio nuts", "milk", "cookies"])
+			expect(Dog.show_favorite_treats).to eq(["bones", "pistachio nuts", "milk", "cookies"])
 		end
 	end
 
 	describe "adding a treat to favorite treats array" do
 		it "should add treat to favorite_treat array" do
-			dog.add_favorite_treat("lettuce")
-			expect(dog.show_favorite_treats).to eq(["bones", "pistachio nuts", "milk", "cookies", "lettuce"])
+			Dog.add_favorite_treat("lettuce")
+			expect(Dog.show_favorite_treats).to eq(["bones", "pistachio nuts", "milk", "cookies", "lettuce"])
 		end
 	end
 
