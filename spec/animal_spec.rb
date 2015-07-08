@@ -59,6 +59,23 @@ describe Dog do
 			expect(dog.show_favorite_treats).to eq(["bones", "pistachio nuts", "milk", "cookies", "lettuce"])
 		end
 	end
+
+	describe "toggling between sleep and awake in one method" do
+		it "should wake if dog was asleep" do
+			dog.to_sleep
+			dog.change_sleep
+			expect(dog.sleeping).to be(false)
+		end
+	end
+
+		describe "toggling between sleep and awake in one method" do
+		it "should sleep if dog was awake" do
+			dog.wake_up
+			dog.change_sleep
+			expect(dog.sleeping).to be(true)
+		end
+	end
+
 end
 
 describe "making a cat" do

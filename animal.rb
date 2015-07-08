@@ -15,6 +15,10 @@ class Animal
 		@sleeping = true
 	end
 
+	def change_sleep
+		@sleeping = !@sleeping
+	end
+
 	def feed
 		"NOM NOM NOM"	unless self.sleeping 
 	end
