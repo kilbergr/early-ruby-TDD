@@ -22,6 +22,8 @@ class Animal
 end
 
 class Dog < Animal
+	@@favorite_treats = ["bones", "pistachio nuts", "milk", "cookies"]
+	@@todays_favorite = @@favorite_treats[rand(@@favorite_treats.length)-1]
 	def initialize(name, age)
 		super
 	end
@@ -30,9 +32,31 @@ class Dog < Animal
 		"WOOF" unless self.sleeping
 	end
 
+	def show_favorite_treats
+		@@favorite_treats
+	end
 
+	def add_favorite_treat(treat)
+		@@favorite_treats << treat
+	end
 end
 
+class Cat < Animal
+	def initialize(name,age)
+		super
+	end
+
+# Asked for an instance method called meow which returns "MEOW" if sleeping is not false
+	def meow_asleep
+		"MEOW" unless !@sleeping
+	end
+
+# I think you meant for one if sleeping IS false
+	def meow_awake
+		"MEOW" unless self.sleeping
+	end
+
+end
 
 
 
